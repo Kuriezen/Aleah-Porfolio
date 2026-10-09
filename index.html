@@ -40,6 +40,23 @@
       </div>
     </nav>
 
+    <main class="page" id="page">
+    <!-- Curvy background line that draws itself as you scroll (script.js) -->
+    <svg class="scroll-line" id="scrollLine" aria-hidden="true" focusable="false">
+      <defs>
+        <linearGradient id="scrollLineGradient" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stop-color="#ffb3c6" />
+          <stop offset="0" stop-color="#fffdfe" />
+          <stop offset="0.1875" stop-color="#ff8fab" />
+          <stop offset="0.49" stop-color="#fffdfe" />
+          <stop offset="0.57" stop-color="#ffb3c6" />
+          <stop offset="0.72" stop-color="#ffc2d1" />
+          <stop offset="0.83" stop-color="#fffdfe" />
+        </linearGradient>
+      </defs>
+      <path class="scroll-line__path" fill="none" stroke="url(#scrollLineGradient)" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+
     <!-- HERO -->
     <header class="band hero" id="home">
       <div class="frame hero-frame">
@@ -404,6 +421,8 @@
         </div>
       </div>
     </section>
+
+    </main>
 
     <!-- FOOTER -->
     <footer class="site-footer">

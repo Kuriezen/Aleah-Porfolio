@@ -1228,6 +1228,32 @@ a.chip:hover {
 .c2 { bottom: 16%; left: 8%; background: var(--pastel-pink); width: 18px; height: 18px; animation-delay: -2s; }
 .c3 { top: 12%; right: 6%; background: var(--light-pink); width: 10px; height: 10px; animation-delay: -4s; }
 
+/* SCROLL LINE — a thick curvy ribbon behind the page that draws
+   itself downward as you scroll (inspired by eemonroy.com).
+   Geometry and progress are set in script.js. */
+
+.page {
+  position: relative;
+  isolation: isolate;
+  /* cards that slide in from the side must not widen the page */
+  overflow-x: clip;
+}
+
+.scroll-line {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.scroll-line__path {
+  opacity: var(--line-opacity, 0);
+  transition: opacity 0.3s ease;
+}
+
 /* PAPER SWAY — the hanging wiggle from eemonroy.com's footer note.
    Uses the separate `rotate` property so it stacks on top of each
    element's own tilt; the pivot sits above the paper, where it "hangs". */
