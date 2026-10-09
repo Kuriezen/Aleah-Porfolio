@@ -1,21 +1,11 @@
-// Mobile menu
-const navToggle = document.getElementById("navToggle");
-const topNav = document.getElementById("topNav");
+// Pause / play the floating animations
+const pauseBtn = document.getElementById("pauseBtn");
 
-navToggle.addEventListener("click", () => {
-  const open = topNav.classList.toggle("open");
-  navToggle.setAttribute("aria-expanded", open);
-  navToggle.innerHTML = open
-    ? '<i class="fa-solid fa-xmark"></i>'
-    : '<i class="fa-solid fa-bars"></i>';
-});
-
-topNav.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", () => {
-    topNav.classList.remove("open");
-    navToggle.setAttribute("aria-expanded", false);
-    navToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
-  });
+pauseBtn.addEventListener("click", () => {
+  const paused = document.body.classList.toggle("paused");
+  pauseBtn.innerHTML = paused
+    ? '<i class="fa-solid fa-play"></i> <span>play animations</span>'
+    : '<i class="fa-solid fa-pause"></i> <span>pause animations</span>';
 });
 
 // Reveal sections on scroll
