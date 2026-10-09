@@ -1,0 +1,134 @@
+/* ==========================================================
+   CONTACT — "Let's work together <3", spinning badge, chips
+   ========================================================== */
+
+.contact {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+  padding: 80px 60px;
+}
+
+.contact-left,
+.contact-side {
+  position: relative;
+  z-index: 2;
+}
+
+.contact-title {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+  line-height: 1.15;
+}
+
+.contact-title em {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.1em;
+  color: var(--watermelon);
+}
+
+.beat {
+  display: inline-block;
+  color: var(--watermelon);
+  animation: beat 1.4s ease-in-out infinite;
+}
+
+/* round "open for work" badge with spinning text */
+.badge {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 120px;
+  height: 120px;
+  margin-top: 28px;
+  border-radius: 50%;
+  background: var(--lavender-blush);
+  color: var(--watermelon);
+  font-size: 1.5rem;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.badge:hover {
+  transform: scale(1.08);
+  background: var(--pink-champagne);
+}
+
+.badge svg {
+  position: absolute;
+  inset: 0;
+  animation: spin 12s linear infinite;
+}
+
+.badge text {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 1px;
+  fill: var(--ink);
+}
+
+.contact-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--white);
+  font-size: 0.95rem;
+  transition: transform 0.25s, border-color 0.25s;
+}
+
+.chip i {
+  color: var(--watermelon);
+}
+
+.chip:hover {
+  transform: translateX(6px);
+}
+
+a.chip:hover {
+  border-color: var(--watermelon);
+}
+
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+/* confetti dot positions */
+.c1 { top: 18%; left: 46%; background: var(--watermelon); }
+.c2 { bottom: 16%; left: 8%; background: var(--pastel-pink); width: 18px; height: 18px; animation-delay: -2s; }
+.c3 { top: 12%; right: 6%; background: var(--light-pink); width: 10px; height: 10px; animation-delay: -4s; }
+
+@media (max-width: 960px) {
+  .contact {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .contact {
+    padding: 56px 20px;
+  }
+
+  .badge {
+    width: 100px;
+    height: 100px;
+  }
+}

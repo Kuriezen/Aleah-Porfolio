@@ -1,0 +1,102 @@
+/* ==========================================================
+   ABOUT — intro text + stats
+   ========================================================== */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.about-text {
+  position: relative;
+  padding: 40px;
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  line-height: 1.6;
+}
+
+.about-text p + p {
+  margin-top: 16px;
+}
+
+.about-text strong {
+  font-weight: 600;
+  background: linear-gradient(transparent 60%, var(--pastel-pink) 60%);
+}
+
+/* swaying "hello!" sticker */
+.about-text::after {
+  content: "hello!";
+  position: absolute;
+  top: -16px;
+  right: 24px;
+  padding: 4px 16px;
+  border-radius: 999px;
+  background: var(--watermelon);
+  color: var(--white);
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transform: rotate(6deg);
+  animation: sway 3s ease-in-out infinite;
+}
+
+@keyframes sway {
+  0%, 100% { transform: rotate(6deg); }
+  50% { transform: rotate(-4deg) translateY(-3px); }
+}
+
+.about-stats {
+  display: grid;
+  gap: 20px;
+}
+
+.stat {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding: 22px 28px;
+  background: var(--lavender-blush);
+  transition: transform 0.3s, background 0.3s, opacity 0.7s;
+}
+
+.stat.show:hover {
+  transform: translateX(-6px) rotate(-1deg);
+  background: var(--pink-champagne);
+}
+
+.stat strong {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 2.6rem;
+  line-height: 1;
+  color: var(--watermelon);
+  min-width: 90px;
+}
+
+.stat span {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 960px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .about-grid {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .about-text {
+    padding: 24px;
+    font-size: 1.1rem;
+  }
+}

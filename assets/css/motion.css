@@ -1,0 +1,63 @@
+/* ==========================================================
+   MOTION — reveal-on-scroll + reduced-motion overrides.
+   Loaded last so these rules win over the section files.
+   ========================================================== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal-left { transform: translateX(-40px); }
+.reveal-right { transform: translateX(40px); }
+.reveal-pop { transform: scale(0.85); }
+.reveal-tilt { transform: translateY(40px) rotate(-2deg); }
+
+.reveal.show {
+  opacity: 1;
+  transform: none;
+}
+
+/* tilt cards keep their mouse transform after revealing */
+.reveal.tilt.show {
+  transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+}
+
+/* Visitors who ask their device for less motion get a still page */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .dot,
+  .polaroid,
+  .h-card,
+  .folder-note,
+  .wave,
+  .marquee-track,
+  .sec-title > i,
+  .about-text::after,
+  .avatar,
+  .work-cover,
+  .work-cover i,
+  .work li::before,
+  .ach-wide,
+  .ach-wide i,
+  .edu::before,
+  .beat,
+  .badge svg {
+    animation: none;
+  }
+
+  .g-card li {
+    opacity: 1;
+    transform: none;
+  }
+
+  .title-squiggle {
+    stroke-dashoffset: 0;
+  }
+}

@@ -1,0 +1,213 @@
+/* ==========================================================
+   HERO — "Hi i'm Aleah", polaroid, tilted cards
+   (the hanging sway lives in effects.css)
+   ========================================================== */
+
+.hero-frame {
+  position: relative;
+  padding: 90px 24px 60px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-title {
+  position: relative;
+  z-index: 2;
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(1.7rem, 3.8vw, 3.1rem);
+  line-height: 1.45;
+  letter-spacing: -0.01em;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.hero-title .name {
+  font-family: var(--sans);
+  font-weight: 600;
+  color: var(--watermelon);
+}
+
+.wave {
+  display: inline-block;
+  font-size: 0.7em;
+  color: var(--light-pink);
+  transform-origin: 70% 80%;
+  animation: wave 2.4s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0%, 60%, 100% { transform: rotate(0); }
+  10%, 30% { transform: rotate(16deg); }
+  20%, 40% { transform: rotate(-10deg); }
+}
+
+.scribble {
+  display: block;
+  width: min(420px, 70%);
+  margin: 6px auto 0;
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+}
+
+/* confetti dot positions */
+.d1 { top: 12%; left: 14%; background: var(--watermelon); }
+.d2 { top: 9%; left: 32%; background: var(--light-pink); width: 9px; height: 9px; animation-delay: -1s; }
+.d3 { top: 16%; right: 22%; background: var(--watermelon); animation-delay: -2s; }
+.d4 { top: 8%; right: 12%; background: var(--pastel-pink); width: 16px; height: 16px; animation-delay: -3s; }
+.d5 { top: 38%; left: 8%; background: var(--pink-champagne); width: 18px; height: 18px; animation-delay: -1.5s; }
+.d6 { top: 48%; right: 8%; background: var(--light-pink); animation-delay: -4s; }
+.d7 { top: 72%; left: 18%; background: var(--watermelon); width: 8px; height: 8px; animation-delay: -2.5s; }
+.d8 { top: 66%; right: 20%; background: var(--pastel-pink); animation-delay: -5s; }
+
+/* cards + polaroid */
+
+.hero-cards {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 46px auto 0;
+  max-width: 820px;
+}
+
+.h-card {
+  width: 250px;
+  padding: 18px 20px 20px;
+  border-radius: 6px;
+  text-align: left;
+  box-shadow: 0 14px 30px rgba(251, 111, 146, 0.18);
+}
+
+.h-card p {
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  line-height: 1.2;
+}
+
+.doodles {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+  font-size: 1.5rem;
+  color: var(--ink);
+  opacity: 0.75;
+}
+
+.h-card-left {
+  background: linear-gradient(135deg, var(--lavender-blush), var(--pastel-pink) 60%, var(--pink-champagne));
+  transform: rotate(-6deg) translate(30px, -10px);
+}
+
+.h-card-right {
+  background: linear-gradient(135deg, var(--pink-champagne), var(--light-pink));
+  transform: rotate(5deg) translate(-30px, 20px);
+}
+
+.polaroid {
+  position: relative;
+  z-index: 3;
+  width: 250px;
+  background: var(--white);
+  padding: 12px 12px 0;
+  box-shadow: 0 20px 45px rgba(58, 31, 43, 0.18);
+  transform: rotate(-2deg);
+  transition: transform 0.4s ease;
+}
+
+.polaroid:hover {
+  transform: rotate(0deg) scale(1.03);
+}
+
+.polaroid img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: 50% 18%;
+}
+
+.polaroid figcaption {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.3rem;
+  padding: 8px 0 12px;
+}
+
+.tape {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  width: 96px;
+  height: 28px;
+  transform: translateX(-50%) rotate(-4deg);
+  background: rgba(255, 179, 198, 0.75);
+}
+
+/* buttons + pause */
+
+.hero-actions {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 54px;
+}
+
+.pause-btn {
+  position: relative;
+  z-index: 2;
+  margin-top: 40px;
+  background: none;
+  border: 0;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+
+.pause-btn i {
+  font-size: 0.6rem;
+  margin-right: 4px;
+}
+
+@media (max-width: 700px) {
+  .hero-frame {
+    padding: 60px 16px 40px;
+  }
+
+  .hero-cards {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .polaroid {
+    order: -1;
+    width: 230px;
+  }
+
+  .h-card {
+    width: 230px;
+    padding: 14px 16px;
+  }
+
+  .h-card p {
+    font-size: 1.15rem;
+  }
+
+  .doodles {
+    display: none;
+  }
+
+  .h-card-left {
+    transform: rotate(-5deg) translate(-26px, -6px);
+  }
+
+  .h-card-right {
+    transform: rotate(4deg) translate(26px, -14px);
+  }
+}

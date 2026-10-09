@@ -1,0 +1,71 @@
+/* ==========================================================
+   EDUCATION
+   ========================================================== */
+
+.edu {
+  position: relative;
+  overflow: hidden;
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 28px 32px;
+  border: 1px solid var(--line);
+  background: var(--white);
+  transition: transform 0.3s, box-shadow 0.3s, opacity 0.7s;
+}
+
+.edu.show:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 34px rgba(251, 111, 146, 0.14);
+}
+
+/* big pale floating graduation cap */
+.edu::before {
+  content: "\f19d";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  right: 190px;
+  bottom: -18px;
+  font-size: 5.5rem;
+  color: var(--lavender-blush);
+  animation: float 5s ease-in-out infinite;
+}
+
+.edu > * {
+  position: relative;
+}
+
+.edu h3 {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.edu p {
+  color: var(--ink-soft);
+}
+
+.edu-place {
+  flex: none;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--rose-deep);
+}
+
+@media (max-width: 700px) {
+  .edu {
+    margin: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 22px;
+  }
+
+  .edu::before {
+    right: 16px;
+  }
+}

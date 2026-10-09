@@ -1,0 +1,124 @@
+/* ==========================================================
+   TOOLS — platform logos + programming languages
+   ========================================================== */
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.langs-grid {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.tool {
+  border: 1px solid var(--line);
+  background: var(--white);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.tool.show:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(251, 111, 146, 0.15);
+  animation: wiggle 0.5s ease;
+}
+
+@keyframes wiggle {
+  0%, 100% { rotate: 0deg; }
+  25% { rotate: -2deg; }
+  75% { rotate: 2deg; }
+}
+
+.tool-img {
+  padding: 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+/* All logos share the same 2:1 box so they line up */
+.tool-img img {
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  object-fit: contain;
+  transition: transform 0.35s ease;
+}
+
+.tool:hover .tool-img img,
+.tool:hover .lang-img i {
+  transform: scale(1.08);
+}
+
+/* Language tiles use icons instead of images, in the same 2:1 box */
+.lang-img {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 2 / 1;
+  box-sizing: content-box;
+}
+
+.lang-img i {
+  font-size: 3.2rem;
+  transition: transform 0.35s ease;
+}
+
+.lang-html { color: #e34f26; }
+.lang-css { color: #1572b6; }
+.lang-js { color: #f0c419; }
+.lang-java { color: #e76f00; }
+.lang-sql { color: #00758f; }
+
+.tool figcaption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  font-size: 0.64rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.tool figcaption em {
+  font-style: normal;
+  color: var(--rose-deep);
+  text-align: right;
+}
+
+@media (max-width: 960px) {
+  .tools-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .langs-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .tools-grid {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .tool-img {
+    padding: 10px;
+  }
+
+  .lang-img i {
+    font-size: 2.4rem;
+  }
+
+  .tool figcaption {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    padding: 10px 12px;
+    font-size: 0.58rem;
+  }
+
+  .tool figcaption em {
+    text-align: left;
+  }
+}

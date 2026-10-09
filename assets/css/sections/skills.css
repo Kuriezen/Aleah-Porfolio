@@ -1,0 +1,114 @@
+/* ==========================================================
+   SKILLS — two gradient cards that tilt toward the mouse
+   ========================================================== */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.g-card {
+  padding: 30px;
+  font-family: var(--serif);
+}
+
+.g-pink {
+  background: linear-gradient(160deg, var(--pastel-pink), var(--lavender-blush) 70%);
+}
+
+.g-blush {
+  background: linear-gradient(160deg, var(--lavender-blush), var(--pink-champagne) 80%);
+}
+
+/* tilt amount is set by assets/js/tilt.js */
+.tilt {
+  transition: transform 0.2s ease, opacity 0.7s ease;
+  box-shadow: 0 18px 40px rgba(251, 111, 146, 0.12);
+}
+
+.g-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.avatar {
+  flex: none;
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: var(--white);
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+  color: var(--watermelon);
+  box-shadow: 0 6px 16px rgba(251, 111, 146, 0.2);
+  animation: bounce 2.8s ease-in-out infinite;
+}
+
+.g-blush .avatar {
+  animation-delay: -1.4s;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+
+.g-head h3 {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+.g-sub {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
+/* list items slide in one by one once the card appears */
+.g-card li {
+  font-size: 1.12rem;
+  line-height: 1.55;
+  padding: 10px 0;
+  border-top: 1px solid rgba(251, 111, 146, 0.25);
+  opacity: 0;
+  transform: translateX(-14px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.g-card li strong {
+  font-weight: 600;
+}
+
+.g-card.show li {
+  opacity: 1;
+  transform: none;
+}
+
+.g-card.show li:nth-child(1) { transition-delay: 0.25s; }
+.g-card.show li:nth-child(2) { transition-delay: 0.4s; }
+.g-card.show li:nth-child(3) { transition-delay: 0.55s; }
+.g-card.show li:nth-child(4) { transition-delay: 0.7s; }
+.g-card.show li:nth-child(5) { transition-delay: 0.85s; }
+
+@media (max-width: 960px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .skills-grid {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .g-card {
+    padding: 24px;
+  }
+}

@@ -1,0 +1,90 @@
+/* ==========================================================
+   ACHIEVEMENTS — count-up numbers + shimmering bar
+   ========================================================== */
+
+.ach-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.ach {
+  padding: 28px;
+  transition: transform 0.3s, box-shadow 0.3s, opacity 0.7s;
+}
+
+.ach.show:hover {
+  transform: translateY(-6px) rotate(-1.5deg);
+  box-shadow: 0 16px 34px rgba(251, 111, 146, 0.18);
+}
+
+.ach.show:nth-child(even):hover {
+  transform: translateY(-6px) rotate(1.5deg);
+}
+
+.ach strong {
+  display: block;
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 3.2rem;
+  line-height: 1;
+  color: var(--watermelon);
+  margin-bottom: 14px;
+}
+
+.ach h3 {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.ach p {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+.ach-wide {
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 22px 28px;
+  background: linear-gradient(90deg, var(--pastel-pink), var(--pink-champagne), var(--light-pink), var(--pastel-pink));
+  background-size: 300% 100%;
+  animation: gradient 7s ease infinite;
+  font-family: var(--serif);
+  font-size: 1.15rem;
+}
+
+.ach-wide i {
+  font-size: 1.4rem;
+  color: var(--white);
+  animation: flash 2s ease-in-out infinite;
+}
+
+@keyframes flash {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.25) rotate(-12deg); }
+}
+
+@media (max-width: 960px) {
+  .ach-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .ach-grid {
+    grid-template-columns: 1fr;
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .ach-wide {
+    margin: 12px;
+    align-items: flex-start;
+  }
+}
