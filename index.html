@@ -3,12 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aleah J. Cocamas | Virtual Assistant & GoHighLevel Specialist</title>
+    <meta
+      name="description"
+      content="Aleah J. Cocamas — Virtual Assistant and GoHighLevel Specialist helping businesses with CRM management, marketing automation, and admin support."
+    />
 
-    <title>Aleah J. Cocamas | Portfolio</title>
-
-    <!-- Google Font -->
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
 
@@ -18,294 +23,394 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
 
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
     <!-- HEADER -->
-
     <header class="site-header">
       <div class="header-inner">
-        <div class="brand">
-          <h1>ALEAH J. COCAMAS</h1>
-          <p>Virtual Assistant • GoHighLevel Specialist</p>
-        </div>
+        <a href="#home" class="brand">
+          <span class="brand-mark" aria-hidden="true">
+            <span></span><span></span><span></span><span></span>
+          </span>
+          <span class="brand-name">Aleah</span>
+        </a>
 
-        <nav class="top-nav">
+        <nav class="top-nav" id="topNav">
+          <a href="#home">Home</a>
           <a href="#about">About</a>
           <a href="#tools">Tools</a>
           <a href="#skills">Skills</a>
           <a href="#experience">Experience</a>
           <a href="#achievements">Achievements</a>
-          <a href="#education">Education</a>
-          <a href="#connect">Connect</a>
-
-          <a href="RESUME - VA_Cocamas-Aleah.pdf" download class="resume-btn">
-            Resume
-          </a>
+          <a href="#contact">Contact</a>
         </nav>
+
+        <a href="RESUME - VA_Cocamas-Aleah.pdf" download class="cv-btn">
+          Download CV
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
       </div>
     </header>
 
     <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-stage">
+        <h1 class="hero-title solid">
+          <span>I'M A VIRTUAL</span>
+          <span>ASSISTANT</span>
+        </h1>
 
-    <section class="hero">
-      <div class="hero-content">
-        <div class="hero-text">
-          <h2>Virtual Assistant & GoHighLevel Specialist</h2>
+        <svg class="hero-star" viewBox="0 0 200 200" aria-hidden="true">
+          <g fill="currentColor">
+            <rect x="80" y="0" width="40" height="200" />
+            <rect x="80" y="0" width="40" height="200" transform="rotate(60 100 100)" />
+            <rect x="80" y="0" width="40" height="200" transform="rotate(120 100 100)" />
+          </g>
+        </svg>
 
-          <p>
-            Helping businesses automate workflows, manage CRMs, optimize
-            funnels, and improve customer engagement through smart systems and
-            virtual support.
+        <div class="hero-photo">
+          <img src="Images/aleah-photo.png" alt="Aleah J. Cocamas" />
+          <p class="hero-title outline" aria-hidden="true">
+            <span>I'M A VIRTUAL</span>
+            <span>ASSISTANT</span>
           </p>
-
-          <div class="hero-buttons">
-            <a href="#experience" class="btn primary"> View Experience </a>
-
-            <a
-              href="RESUME - VA_Cocamas-Aleah.pdf"
-              download
-              class="btn secondary"
-            >
-              Download Resume
-            </a>
-          </div>
         </div>
 
-        <div class="hero-image">
-          <img src="Images/ally-grad.png" alt="Aleah Cocamas" />
-        </div>
+        <p class="hero-sub">GoHighLevel Specialist · CRM &amp; Automation · Butuan City, PH</p>
+
+        <a href="#about" class="scroll-badge" aria-label="Scroll down">
+          <svg viewBox="0 0 120 120" class="scroll-text" aria-hidden="true">
+            <defs>
+              <path id="circlePath" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0" />
+            </defs>
+            <text>
+              <textPath href="#circlePath" textLength="286" lengthAdjust="spacing">SCROLL DOWN · SCROLL DOWN ·</textPath>
+            </text>
+          </svg>
+          <span class="scroll-core"><i class="fa-solid fa-computer-mouse"></i></span>
+        </a>
       </div>
     </section>
 
     <!-- ABOUT -->
+    <section class="about" id="about">
+      <div class="wrap about-grid">
+        <div class="about-text reveal">
+          <p class="eyebrow-big">HELLO</p>
+          <h2>I'M ALEAH</h2>
+          <p class="about-lead">
+            Results-driven Virtual Assistant and GoHighLevel Specialist with over
+            2 years of experience supporting businesses through CRM management,
+            marketing automation, lead generation, and administrative operations.
+            I design sales funnels, automate client workflows, and connect
+            business systems using GoHighLevel, Zapier, n8n, and web platforms.
+          </p>
 
-    <section id="about" class="container">
-      <h2>
-        <i class="fa-solid fa-user"></i>
-        About Me
-      </h2>
+          <ul class="about-stats">
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              <strong>2+</strong>
+              <span>Years Experience</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              <strong>80+</strong>
+              <span>Client Accounts Supported</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              <strong>800+</strong>
+              <span>Companies in Lead Workflows</span>
+            </li>
+          </ul>
+        </div>
 
-      <p class="section-text">
-        Results-driven Virtual Assistant and GoHighLevel Specialist with over 2
-        years of experience supporting businesses through CRM management,
-        marketing automation, lead generation, and administrative operations.
-      </p>
+        <div class="about-visual reveal">
+          <div class="checker" aria-hidden="true"></div>
+          <span class="spark spark-1" aria-hidden="true"></span>
+          <span class="spark spark-2" aria-hidden="true"></span>
+          <img src="Images/ally-grad.png" alt="Aleah J. Cocamas graduation portrait" />
+        </div>
+      </div>
     </section>
 
     <!-- TOOLS -->
-
-    <section id="tools" class="container">
-      <h2>
-        <i class="fa-solid fa-toolbox"></i>
-        Tools & Platforms
-      </h2>
-
-      <div class="tools-grid">
-        <div class="tool">
-          <img src="Images/highlevel-logo.png" alt="GoHighLevel" />
-          <p>GoHighLevel</p>
+    <section class="section" id="tools">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="tag">Tools &amp; Platforms</span>
+          <h2>What I Work With</h2>
         </div>
 
-        <div class="tool">
-          <img src="Images/Zapier_logo.png" alt="Zapier" />
-          <p>Zapier</p>
-        </div>
-
-        <div class="tool">
-          <img
-            src="Images/png-transparent-n8n-logo-tech-companies.png"
-            alt="n8n"
-          />
-          <p>n8n</p>
-        </div>
-
-        <div class="tool">
-          <img src="Images/Vapi-logo.png" alt="VAPI" />
-          <p>VAPI</p>
-        </div>
-
-        <div class="tool">
-          <img src="Images/WordPress-Logo.png" alt="WordPress" />
-          <p>WordPress</p>
-        </div>
-
-        <div class="tool">
-          <img src="Images/Canva-New-Logo.png" alt="Canva" />
-          <p>Canva</p>
+        <div class="tools-grid">
+          <figure class="tool reveal">
+            <img src="Images/logos/highlevel.png" alt="GoHighLevel logo" />
+            <figcaption>GoHighLevel</figcaption>
+          </figure>
+          <figure class="tool reveal">
+            <img src="Images/logos/zapier.png" alt="Zapier logo" />
+            <figcaption>Zapier</figcaption>
+          </figure>
+          <figure class="tool reveal">
+            <img src="Images/logos/n8n.png" alt="n8n logo" />
+            <figcaption>n8n</figcaption>
+          </figure>
+          <figure class="tool reveal">
+            <img src="Images/logos/closebot.png" alt="Closebot logo" />
+            <figcaption>Closebot</figcaption>
+          </figure>
+          <figure class="tool reveal">
+            <img src="Images/logos/vapi.png" alt="VAPI logo" />
+            <figcaption>VAPI</figcaption>
+          </figure>
+          <figure class="tool reveal">
+            <img src="Images/logos/google-workspace.png" alt="Google Workspace logo" />
+            <figcaption>Google Workspace</figcaption>
+          </figure>
+          <figure class="tool reveal">
+            <img src="Images/logos/wordpress.png" alt="WordPress logo" />
+            <figcaption>WordPress</figcaption>
+          </figure>
+          <figure class="tool reveal">
+            <img src="Images/logos/canva.png" alt="Canva logo" />
+            <figcaption>Canva</figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
     <!-- SKILLS -->
-
-    <section id="skills" class="container">
-      <h2>
-        <i class="fa-solid fa-code"></i>
-        Core Skills
-      </h2>
-
-      <div class="skills">
-        <div class="skill-card">
-          <h3>Virtual Assistant Skills</h3>
-
-          <ul>
-            <li>Calendar & Email Management</li>
-            <li>Customer Support</li>
-            <li>Data Entry & Research</li>
-            <li>Social Media Scheduling</li>
-            <li>Google Workspace & MS Office</li>
-          </ul>
+    <section class="section section-alt" id="skills">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="tag">Core Skills</span>
+          <h2>How I Can Help</h2>
         </div>
 
-        <div class="skill-card">
-          <h3>Technical & Marketing</h3>
+        <div class="skills-grid">
+          <article class="skill-panel reveal">
+            <div class="panel-head">
+              <span class="panel-icon"><i class="fa-solid fa-gears"></i></span>
+              <h3>Technical &amp; Automation</h3>
+            </div>
+            <ul>
+              <li>
+                <strong>GoHighLevel Platform</strong>
+                <span>CRM setup, pipeline management, funnel building &amp; snapshot implementation</span>
+              </li>
+              <li>
+                <strong>Automation &amp; Logic</strong>
+                <span>Multi-step workflows, webhook triggers, Zapier &amp; n8n integration</span>
+              </li>
+              <li>
+                <strong>Campaign Management</strong>
+                <span>Email marketing, drip sequences &amp; A2P 10DLC compliance verification</span>
+              </li>
+              <li>
+                <strong>Chatbot Systems</strong>
+                <span>Chatbot integration, automated lead response &amp; conversational workflows</span>
+              </li>
+              <li>
+                <strong>Tracking &amp; Reporting</strong>
+                <span>Facebook &amp; Google Ads tracking, UTM parameters &amp; dashboard reporting</span>
+              </li>
+            </ul>
+          </article>
 
-          <ul>
-            <li>GoHighLevel CRM</li>
-            <li>Funnel Building</li>
-            <li>Email Marketing</li>
-            <li>Automation Workflows</li>
-            <li>Chatbot Integration</li>
-          </ul>
-        </div>
-
-        <div class="skill-card">
-          <h3>Website & Content</h3>
-
-          <ul>
-            <li>Duda Website Management</li>
-            <li>Shopify Management</li>
-            <li>SEO Optimization</li>
-            <li>Blog Publishing</li>
-            <li>Content Updates</li>
-          </ul>
+          <article class="skill-panel reveal">
+            <div class="panel-head">
+              <span class="panel-icon"><i class="fa-solid fa-headset"></i></span>
+              <h3>Virtual Assistance &amp; Content</h3>
+            </div>
+            <ul>
+              <li>
+                <strong>Administrative Operations</strong>
+                <span>Calendar coordination, inbox management &amp; task prioritization</span>
+              </li>
+              <li>
+                <strong>Customer Support</strong>
+                <span>Multi-channel email and chat support with rapid resolution times</span>
+              </li>
+              <li>
+                <strong>Web &amp; E-Commerce</strong>
+                <span>Duda &amp; Shopify content updates, page modifications &amp; basic SEO</span>
+              </li>
+              <li>
+                <strong>Content Publishing</strong>
+                <span>Blog formatting, article publishing, brand assets &amp; social scheduling</span>
+              </li>
+              <li>
+                <strong>Productivity Tools</strong>
+                <span>Google Workspace, Microsoft Office, ClickUp, Asana, Trello &amp; Slack</span>
+              </li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>
 
     <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="tag">Experience</span>
+          <h2>Where I've Worked</h2>
+        </div>
 
-    <section id="experience" class="container">
-      <h2>
-        <i class="fa-solid fa-briefcase"></i>
-        Professional Experience
-      </h2>
+        <div class="timeline">
+          <article class="role reveal">
+            <div class="role-meta">
+              <span class="pill">Sep 2025 – Present</span>
+              <p>Remote · Part-Time</p>
+            </div>
+            <div class="role-body">
+              <h3>Pod Virtual Assistant</h3>
+              <ul>
+                <li>Executed 80+ operational and client support tasks across diverse accounts with high accuracy and strict adherence to deadlines.</li>
+                <li>Managed CRM updates, client communications, appointment scheduling, and cross-functional task tracking.</li>
+                <li>Published and formatted SEO-friendly blog content across client Duda and Shopify websites while maintaining brand guidelines.</li>
+                <li>Supported GoHighLevel maintenance, including contact database updates, funnel modifications, and automation troubleshooting.</li>
+                <li>Collaborated closely with account managers and project leads to streamline client deliverables and project workflows.</li>
+              </ul>
+            </div>
+          </article>
 
-      <article class="role">
-        <h3>Pod Virtual Assistant (Part-Time)</h3>
+          <article class="role reveal">
+            <div class="role-meta">
+              <span class="pill">Jul 2025 – Aug 2025</span>
+              <p>Self-Employed · Remote</p>
+            </div>
+            <div class="role-body">
+              <h3>Freelance Virtual Assistant &amp; GoHighLevel Specialist</h3>
+              <ul>
+                <li>Provided executive virtual assistance, schedule coordination, and task management for founders and startups.</li>
+                <li>Configured custom GoHighLevel CRM workflows, automated email triggers, and client onboarding funnels.</li>
+                <li>Handled social media scheduling, online market research, and lead-nurturing initiatives to assist business acquisition.</li>
+              </ul>
+            </div>
+          </article>
 
-        <p>Agency Environment | Sep 2025 – Present | Remote</p>
-
-        <ul>
-          <li>Completed 80+ client support tasks across multiple accounts.</li>
-          <li>Managed CRM updates and scheduling operations.</li>
-          <li>Created and published SEO-friendly blog content.</li>
-          <li>Handled website updates and workflow adjustments.</li>
-        </ul>
-      </article>
-
-      <article class="role">
-        <h3>Freelance Virtual Assistant & GoHighLevel Specialist</h3>
-
-        <p>Self-Employed | Jul 2025 – Aug 2025 | Remote</p>
-
-        <ul>
-          <li>Customized CRMs and automation workflows.</li>
-          <li>Managed lead nurturing and marketing campaigns.</li>
-          <li>Provided admin and virtual assistant support.</li>
-        </ul>
-      </article>
-
-      <article class="role">
-        <h3>GoHighLevel Specialist</h3>
-
-        <p>
-          Worked under a Marketing Automation VA | Jul 2024 – Jul 2025 | On-site
-        </p>
-
-        <ul>
-          <li>Managed multiple client accounts across industries.</li>
-          <li>Built automated workflows and CRM systems.</li>
-          <li>Implemented A2P 10DLC compliance.</li>
-          <li>Integrated Zapier, n8n, and Closebot systems.</li>
-        </ul>
-      </article>
+          <article class="role reveal">
+            <div class="role-meta">
+              <span class="pill">Jul 2024 – Jul 2025</span>
+              <p>Marketing Automation Agency · On-site</p>
+            </div>
+            <div class="role-body">
+              <h3>GoHighLevel Specialist</h3>
+              <ul>
+                <li>Supported client accounts across multiple niches including home services, wellness, coaching, and digital marketing.</li>
+                <li>Facilitated complete CRM data migrations, custom pipeline builds, and client dashboard reporting setups.</li>
+                <li>Designed automated workflow sequences for lead nurturing, appointment reminders, and billing/invoice follow-ups.</li>
+                <li>Configured A2P 10DLC SMS compliance and built conversion-focused multi-step email marketing sequences.</li>
+                <li>Connected external platforms using Zapier, n8n, and Closebot; configured Facebook and Google Ads conversion tracking.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
     <!-- ACHIEVEMENTS -->
-
-    <section id="achievements" class="container">
-      <h2>
-        <i class="fa-solid fa-trophy"></i>
-        Key Achievements
-      </h2>
-
-      <div class="stats">
-        <div class="stat-card">
-          <h3>80+</h3>
-          <p>Client Tasks Completed</p>
+    <section class="achievements" id="achievements">
+      <div class="wrap">
+        <div class="section-head light reveal">
+          <span class="tag">Key Achievements</span>
+          <h2>Results That Matter</h2>
         </div>
 
-        <div class="stat-card">
-          <h3>46%</h3>
-          <p>Email Open Rate</p>
+        <div class="ach-grid">
+          <div class="ach reveal">
+            <strong>80+</strong>
+            <h3>Client Account Management</h3>
+            <p>Supported 80+ client accounts with CRM management, admin support, and website content updates.</p>
+          </div>
+          <div class="ach reveal">
+            <strong>800+</strong>
+            <h3>Lead Generation Workflows</h3>
+            <p>Processed and evaluated automated lead workflows for 800+ companies, improving verification accuracy and lead scoring.</p>
+          </div>
+          <div class="ach reveal">
+            <strong>46%</strong>
+            <h3>Email Campaign Performance</h3>
+            <p>Multi-step email sequences reaching up to 46% open rates and 18% click-through rates.</p>
+          </div>
+          <div class="ach reveal">
+            <strong>0</strong>
+            <h3>Data Lost in Migration</h3>
+            <p>Migrated CRM pipelines, contact records, and automation assets with zero data loss.</p>
+          </div>
         </div>
 
-        <div class="stat-card">
-          <h3>800+</h3>
-          <p>Companies Evaluated</p>
-        </div>
-
-        <div class="stat-card">
-          <h3>100%</h3>
-          <p>Zero Data Loss CRM Migration</p>
+        <div class="ach-wide reveal">
+          <i class="fa-solid fa-bolt"></i>
+          <p>
+            <strong>Automation Optimization:</strong> built missed-call text-backs
+            and appointment reminder sequences that substantially reduced manual
+            administrative hours.
+          </p>
         </div>
       </div>
     </section>
 
     <!-- EDUCATION -->
+    <section class="section" id="education">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="tag">Education</span>
+          <h2>Academic Background</h2>
+        </div>
 
-    <section id="education" class="container">
-      <h2>
-        <i class="fa-solid fa-graduation-cap"></i>
-        Education
-      </h2>
-
-      <div class="education-card">
-        <h3>Caraga State University</h3>
-
-        <p>Ampayon, Butuan City, Philippines</p>
-
-        <p>Bachelor of Elementary Education (BEED)</p>
-
-        <p>June 2026</p>
+        <article class="edu-card reveal">
+          <span class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+          <div>
+            <h3>Bachelor of Elementary Education (BEED)</h3>
+            <p>Caraga State University – College of Education (CED)</p>
+            <p class="muted">Ampayon, Butuan City, Philippines</p>
+          </div>
+        </article>
       </div>
     </section>
 
-    <!-- CONNECT -->
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <div class="wrap contact-inner reveal">
+        <span class="tag">Let's Connect</span>
+        <h2>Let's work <span class="accent">together.</span></h2>
+        <p>
+          Need help with your CRM, automations, or day-to-day operations? I'd
+          love to hear about your business.
+        </p>
 
-    <section id="connect" class="container connect">
-      <h2>
-        <i class="fa-solid fa-envelope"></i>
-        Let's Connect
-      </h2>
+        <div class="contact-list">
+          <a href="mailto:allycocamas@gmail.com">
+            <i class="fa-solid fa-envelope"></i> allycocamas@gmail.com
+          </a>
+          <a href="tel:+639532180402">
+            <i class="fa-solid fa-phone"></i> 0953-218-0402
+          </a>
+          <span>
+            <i class="fa-solid fa-location-dot"></i> Butuan City, Philippines
+          </span>
+        </div>
 
-      <p>allycocamas@gmail.com</p>
-      <p>0953-218-0402</p>
-      <p>Butuan City, Philippines</p>
-
-      <div class="socials">
-        <a href="allycocamas@gmail.com">Gmail</a>
-        <a href="https://www.facebook.com/houstin.ceey">Facebook</a>
-        <a href="#">Portfolio</a>
+        <div class="contact-actions">
+          <a href="mailto:allycocamas@gmail.com" class="btn btn-orange">Email Me</a>
+          <a href="https://www.facebook.com/houstin.ceey" target="_blank" rel="noopener" class="btn btn-ghost">
+            <i class="fa-brands fa-facebook-f"></i> Facebook
+          </a>
+        </div>
       </div>
     </section>
 
-    <!-- JS -->
+    <footer class="site-footer">
+      <p>© <span id="year">2026</span> Aleah J. Cocamas · Virtual Assistant &amp; GoHighLevel Specialist</p>
+    </footer>
+
     <script src="script.js"></script>
   </body>
 </html>
-```
