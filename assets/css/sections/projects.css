@@ -1,0 +1,151 @@
+/* ==========================================================
+   PROJECTS — featured work cards with a "View in Canva" button
+   ========================================================== */
+
+.project-list {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+}
+
+.project {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  border: 1px solid var(--line);
+  background: var(--white);
+  transition: transform 0.3s, box-shadow 0.3s, opacity 0.7s;
+}
+
+.project.show:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(251, 111, 146, 0.15);
+}
+
+/* pink cover with a stack of little "pages" like a long funnel */
+.project-cover {
+  position: relative;
+  min-height: 260px;
+  padding: 24px;
+  overflow: hidden;
+  border-right: 1px solid var(--line);
+  background: linear-gradient(135deg, var(--lavender-blush), var(--pastel-pink) 55%, var(--light-pink));
+  background-size: 200% 200%;
+  animation: gradient 8s ease infinite;
+}
+
+.project-tag {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--rose-deep);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.project-pages {
+  position: absolute;
+  left: 50%;
+  top: 56%;
+  width: 120px;
+  height: 150px;
+  transform: translate(-50%, -50%);
+}
+
+.project-pages span {
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: 0 10px 24px rgba(58, 31, 43, 0.12);
+  transition: transform 0.4s ease;
+}
+
+.project-pages span:nth-child(1) { transform: rotate(-10deg) translateX(-26px); opacity: 0.6; }
+.project-pages span:nth-child(2) { transform: rotate(8deg) translateX(26px); opacity: 0.8; }
+
+/* fake page content lines on the front page */
+.project-pages span:nth-child(3) {
+  background:
+    linear-gradient(var(--pastel-pink), var(--pastel-pink)) 14px 16px / 60% 10px no-repeat,
+    linear-gradient(var(--line), var(--line)) 14px 36px / 80% 6px no-repeat,
+    linear-gradient(var(--line), var(--line)) 14px 48px / 70% 6px no-repeat,
+    linear-gradient(var(--lavender-blush), var(--lavender-blush)) 14px 66px / calc(100% - 28px) 44px no-repeat,
+    linear-gradient(var(--watermelon), var(--watermelon)) 14px 120px / 50% 12px no-repeat,
+    var(--white);
+}
+
+.project:hover .project-pages span:nth-child(1) { transform: rotate(-16deg) translateX(-40px); }
+.project:hover .project-pages span:nth-child(2) { transform: rotate(14deg) translateX(40px); }
+
+.project-icon {
+  position: absolute;
+  right: 20px;
+  bottom: 18px;
+  font-size: 2.6rem;
+  color: rgba(255, 255, 255, 0.85);
+  animation: float 4s ease-in-out infinite;
+}
+
+.project-body {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 14px;
+}
+
+.project-body h3 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.project-body p {
+  max-width: 520px;
+  color: var(--ink-soft);
+}
+
+.project-body .btn i {
+  font-size: 0.8rem;
+}
+
+.project .caption {
+  grid-column: 1 / -1;
+  border-top: 1px solid var(--line);
+}
+
+@media (max-width: 960px) {
+  .project {
+    grid-template-columns: 1fr;
+  }
+
+  .project-cover {
+    min-height: 220px;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+}
+
+@media (max-width: 700px) {
+  .project-list {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .project-body {
+    padding: 22px;
+  }
+
+  .project-body h3 {
+    font-size: 1.6rem;
+  }
+}
