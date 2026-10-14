@@ -10,7 +10,14 @@
 }
 
 .langs-grid {
-  grid-template-columns: repeat(5, 1fr);
+  --cols: 5;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* centres a shorter last row */
+}
+
+.langs-grid .tool {
+  flex: 0 0 calc((100% - (var(--cols) - 1) * 20px) / var(--cols));
 }
 
 .tool {
@@ -62,6 +69,13 @@
   transition: transform 0.35s ease;
 }
 
+/* logo images (React, Vue, Tailwind, PostgreSQL) sized like the icons */
+.tool-img.lang-img img {
+  width: 3.2rem;
+  height: 3.2rem;
+  aspect-ratio: auto;
+}
+
 .lang-html { color: #e34f26; }
 .lang-css { color: #1572b6; }
 .lang-js { color: #f0c419; }
@@ -92,7 +106,7 @@
   }
 
   .langs-grid {
-    grid-template-columns: repeat(3, 1fr);
+    --cols: 3;
   }
 }
 
@@ -108,6 +122,15 @@
 
   .lang-img i {
     font-size: 2.4rem;
+  }
+
+  .tool-img.lang-img img {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  .langs-grid .tool {
+    flex-basis: calc((100% - (var(--cols) - 1) * 12px) / var(--cols));
   }
 
   .tool figcaption {

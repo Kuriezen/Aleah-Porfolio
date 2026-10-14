@@ -52,6 +52,16 @@
   background: var(--watermelon);
 }
 
+.btn-pink {
+  background: var(--watermelon);
+  color: var(--white);
+  box-shadow: 0 8px 20px rgba(251, 111, 146, 0.35);
+}
+
+.btn-pink:hover {
+  background: var(--rose-deep);
+}
+
 .btn-soft {
   background: var(--lavender-blush);
   border: 1px solid var(--pastel-pink);
